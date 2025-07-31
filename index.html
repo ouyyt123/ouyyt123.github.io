@@ -12,13 +12,40 @@
             height: 100vh;
             font-size: 24px;
             text-align: center;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #phoneNumber {
+            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div>
-        <p>我的手机号是：</p>
-        <p><strong>13532567254</strong></p>
+        <p>我的联系方式</p>
+        <button onclick="showPhoneNumber()">显示号码</button>
+        <p id="phoneNumber"><strong>13532567254</strong></p>
     </div>
+
+    <script>
+        function showPhoneNumber() {
+            document.getElementById("phoneNumber").style.display = "block";
+            // 可选：隐藏按钮
+            event.target.style.display = "none";
+        }
+    </script>
 </body>
 </html>
